@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Positioning";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class='container'>
+    <div class='example relative'>
+        <div class='item'><img src='~/Content/images/static.svg' /></div>
+        <div class='item item-relative'><img src='~/Content/images/relative.svg' /></div>
+        <div class='item'><img src='~/Content/images/static.svg' /></div>
+    </div>
+</div>
+
+<div class='container'>
+    <div class='example absolute'>
+        <div class='item'><img src='~/Content/images/static.svg' /></div>
+        <div class='item item-absolute'><img src='~/Content/images/absolute.svg' /></div>
+        <div class='item'><img src='~/Content/images/static.svg' /></div>
+    </div>
+</div>
+
+<div class='container'>
+    <div class='example fixed'>
+        <div class='item'><img src='~/Content/images/static.svg' /></div>
+        <div class='item item-fixed'><img src='~/Content/images/fixed.svg' /></div>
+        <div class='item'><img src='~/Content/images/static.svg' /></div>
+    </div>
+</div>
+
+<div>
+    <button class="btn btn-default">@Html.ActionLink("Go main page", "Index", "Home")</button>
+</div>
+
+<script>
+    var left = 0;
+    var toRight = true;
+    function frame() {
+        var element = document.querySelector('.item-relative');
+        
+        if (toRight) {
+            left += 2;
+            element.style.left = left + 'px';
+            element.style.transform = `rotate(${left}deg)`;
+        }
+        if (left >= 360) {
+            toRight = false;
+        }
+        if (!toRight) {
+            left -= 2;
+            element.style.left = left + 'px';
+            element.style.transform = `rotate(${left}deg)`;
+        }
+        if (!toRight && left == 0) {
+            toRight = true;
+        }
+    }
+
+    var id = setInterval(frame, 15);
+</script>
