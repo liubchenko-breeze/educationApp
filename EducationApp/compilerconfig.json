@@ -1,0 +1,34 @@
+﻿[
+  {
+    "outputFile": "Content/css/mixinsTest.css",
+    "inputFile": "Content/css/mixinsTest.scss"
+  },
+  {
+    "outputFile": "Content/css/theme-winter.css",
+    "inputFile": "Content/css/theme-winter.scss"
+  },
+  {
+    "outputFile": "Content/css/index.css",
+    "inputFile": "Content/css/index.scss"
+  },
+  {
+    "outputFile": "Content/css/response-mobile.css",
+    "inputFile": "Content/css/response-mobile.scss"
+  },
+  {
+    "outputFile": "Content/css/response-tablet.css",
+    "inputFile": "Content/css/response-tablet.scss"
+  },
+  {
+    "outputFile": "Content/css/response.css",
+    "inputFile": "Content/css/response.scss"
+  },
+  {
+    "outputFile": "Content/css/summer/index.css",
+    "inputFile": "Content/css/summer/index.scss"
+  },
+  {
+    "outputFile": "Content/css/winter/index.css",
+    "inputFile": "Content/css/winter/index.scss"
+  }
+]

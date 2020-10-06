@@ -1,0 +1,10 @@
+﻿@import 'theme-winter.scss';
+@import '../buttons.scss';
+
+.header {
+    background: $header-color;
+}
+
+.response-wrapper {
+    @include btn-color('winter');
+}

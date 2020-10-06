@@ -1,0 +1,6 @@
+﻿
+@mixin btn-color($color) {
+    .custom-btn {
+        background-color: $color;
+    }
+}

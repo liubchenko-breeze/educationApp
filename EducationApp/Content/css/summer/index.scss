@@ -1,0 +1,10 @@
+﻿@import 'theme-summer.scss';
+@import '../buttons.scss';
+
+.header {
+    background: $header-color;
+}
+
+.response-wrapper {
+    @include btn-color('summer');
+}

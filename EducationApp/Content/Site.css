@@ -1,9 +1,5 @@
 ﻿/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 170px;
-}
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -37,3 +33,53 @@ a:hover {
     padding: 50px;
     background: #D6E9FE;
 }
+
+.menu {
+    margin-top: 15px;
+}
+
+    .menu > li {
+        display: inline;
+        margin-right: 50px;
+    }
+
+        .menu > li:last-of-type {
+            margin-right: 0;
+        }
+
+.dropdown {
+    position: relative;
+}
+    .dropdown:hover .features-menu { /* This used to be `.features-menu` */
+        display: flex; /* Leave everything else alone */
+        flex-direction: column;
+        background: #B2D6FF;
+        /* ... */
+    }
+    .dropdown > span {
+        z-index: 2;
+        position: relative; /*This is important!*/
+        cursor: pointer;
+    }
+.features-menu {
+    display: none;
+    flex-direction: column;
+    background: #B2D6FF;
+    border-radius: 5px;
+    padding-top: 60px;
+    padding-left: 0;
+    position: absolute; /* Add these */
+    top: -25px;
+    left: -30px;
+}
+
+    .features-menu li {
+        list-style: none;
+        border-bottom: 1px solid #FFF;
+        padding: 0 40px 10px 20px;
+        margin: 10px;
+    }
+
+        .features-menu li:last-of-type {
+            border-bottom: none;
+        }

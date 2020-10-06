@@ -1,0 +1,15 @@
+﻿@media screen and (max-width: 768px)  {
+    @import 'response-mobile.scss';
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    @import 'response-tablet.scss';
+}
+@media screen and (min-width: 993px) {
+    @import 'response.scss';
+}
+
+.response-wrapper {
+    height: 100%;
+    padding-top: 180px;
+}
+

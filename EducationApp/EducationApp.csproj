@@ -33,7 +33,7 @@
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>1</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -120,7 +120,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ResponseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -131,18 +133,71 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <None Include="Content\css\index.scss" />
+    <Content Include="Content\css\index.css">
+      <DependentUpon>index.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\css\index.min.css">
+      <DependentUpon>index.css</DependentUpon>
+    </Content>
     <Content Include="Content\css\positioning.css" />
+    <None Include="Content\css\response-mobile.scss" />
+    <None Include="Content\css\response-tablet.scss" />
+    <None Include="Content\css\response.scss" />
+    <Content Include="Content\css\response-mobile.css">
+      <DependentUpon>response-mobile.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\css\response-mobile.min.css">
+      <DependentUpon>response-mobile.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\response-tablet.css">
+      <DependentUpon>response-tablet.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\css\response-tablet.min.css">
+      <DependentUpon>response-tablet.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\response.css">
+      <DependentUpon>response.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\css\response.min.css">
+      <DependentUpon>response.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\summer\index.css">
+      <DependentUpon>index.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\css\summer\index.min.css">
+      <DependentUpon>index.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\winter\index.css">
+      <DependentUpon>index.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\css\winter\index.min.css">
+      <DependentUpon>index.css</DependentUpon>
+    </Content>
     <Content Include="Content\images\absolute.svg" />
     <Content Include="Content\images\awesome-logo.svg" />
     <Content Include="Content\images\fixed.svg" />
     <Content Include="Content\images\relative.svg" />
+    <Content Include="Content\images\response\content.svg" />
+    <Content Include="Content\images\response\feature.svg" />
+    <Content Include="Content\images\response\header.svg" />
+    <Content Include="Content\images\response\sign-up.svg" />
     <Content Include="Content\images\static.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Content\css\buttons.scss" />
+    <Content Include="Content\css\winter\theme-winter.scss" />
+    <Content Include="Content\css\summer\theme-summer.scss" />
+    <Content Include="Content\css\winter\index.scss" />
+    <Content Include="Content\css\summer\index.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -162,7 +217,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Errors\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
@@ -170,6 +225,8 @@
     <Content Include="Views\Home\Positioning.cshtml" />
     <Content Include="Views\Shared\_CustomLayout.cshtml" />
     <Content Include="Views\Home\BoxModels.cshtml" />
+    <Content Include="Views\Errors\Http404.cshtml" />
+    <Content Include="Views\Response\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
